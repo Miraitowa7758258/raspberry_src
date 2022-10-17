@@ -1,0 +1,12 @@
+﻿﻿#BNF+IAT 1.0 UTF-8;
+!grammar call;
+
+!slot <action>;
+
+!start <callstart>;
+
+<callstart>:(机械臂|打开|关闭|跟随|小微|来玩|结束)<choose>;
+<choose>:<action>|<function>;
+<action>:抓取|放置|复位|观察|巡视|点头|跳舞|休眠|猜谜游戏|捉迷藏游戏|游戏;
+<function>:(色块|人脸)跟随|(正|逆)解|标签(分拣|码垛)|色块(分拣|码垛)|(红色|绿色|蓝色|黄色|黑色)色块|在跳舞|在点头|在巡视|(笛卡尔|猜猜)<action1>;
+<action1>:路径规划|我在哪;
